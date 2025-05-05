@@ -2,8 +2,8 @@ FROM n8nio/n8n
 
 USER root
 
-RUN apt-get update && apt-get install -y ffmpeg
+# Install ffmpeg via apk (for Alpine-based images)
+RUN apk add --no-cache ffmpeg
 
+# Switch back to n8n user
 USER node
-
-CMD ["n8n"]
