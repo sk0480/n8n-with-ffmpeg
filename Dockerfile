@@ -1,4 +1,3 @@
-
 FROM n8nio/n8n
 
 USER root
@@ -6,3 +5,5 @@ USER root
 RUN apt-get update && apt-get install -y ffmpeg
 
 USER node
+
+CMD ["n8n"]
